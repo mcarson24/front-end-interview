@@ -22,3 +22,9 @@ aside {
 header, article, section, .module {
 	padding: 1rem;
 }
+
+/*** MY STYLES ***/
+
+.flex {
+	display: flex;
+}
