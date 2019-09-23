@@ -33,3 +33,32 @@ body {
 .footer {
   background: yellow;
 }
+
+/** MY STYLES */
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+body {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+	main {
+		display: flex;
+	}
+	.sidebar {
+		flex: 0 0 200px;
+	}
+	.content {
+		flex: 4 4 0;
+	}
+	.navigation {
+		order: -1;
+		flex: 1 1 0;
+
+	}
+}
