@@ -1,3 +1,7 @@
+:root {
+	--green: rgba(70, 140, 0, .5); /* #468C00 with a 50% alpha channel. */
+}
+
 * {
   box-sizing: border-box;
 }
@@ -14,4 +18,35 @@ body {
 
 .content {
   padding: 60px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.hero.image {
+	background: linear-gradient(to bottom, var(--green), var(--green)), url('../images/small.jpg');
+	background-size: 100% 100%;
+}
+
+
+.hero h1 {
+	color: #FFF;
+	font-size: 50px;
+	padding: 100px 0;
+}
+
+/* There are three hero images in the `images` folder. Use `small.jpg` as the background up to
+768px wide, `medium.jpg` up to 960px wide and `large.jpg` above 960px wide. */
+@media screen and (min-width: 769px) {
+	.hero.image {
+		background-image: linear-gradient(to bottom, var(--green), var(--green)), url('../images/medium.jpg');	
+	}
+}
+
+@media screen and (min-width: 961px) {
+	.hero.image {
+		background-image: linear-gradient(to bottom, var(--green), var(--green)), url('../images/large.jpg');
+	}
 }
